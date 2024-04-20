@@ -1,0 +1,1621 @@
+.app{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(37, 40, 54);
+}
+.app1 {
+   justify-content: space-between; /* Căn các phần vào hai bên */
+   align-items: center; /* Căn giữa theo chiều dọc */
+   width:100% ;
+   height: 100vh;
+   width: 6%; /* Điều chỉnh kích thước của phần đầu tiên */
+    float: left;
+}
+.sidebar {
+    position: fixed;
+    /*left: -99px;  /*Hide the sidebar */
+    top: 0;
+    height: 110vh;
+    width: 80px;
+    background-color: #1f1d2b;
+    transition: left 0.3s ease;
+}
+ul{
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+}
+ul li {
+    margin-bottom: 45px;
+}
+.sidebar.active {
+    left: 0; /* Show the sidebar */
+    width: 100px;
+    padding: 0px;
+}
+.menu1 {
+    list-style-type: none;
+    padding: 0px;
+    margin: 10px;
+    height: 110vh;
+}
+.menu1 li {
+    padding: 1px;
+}
+
+.menu1 li a {
+    display: block;
+    padding: 1px 20px 0px 10px;
+}
+.menu-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.menu-toggle button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.menu1 li a {
+    transition: color 0.3s ease, background-color 0.3s ease; /* Tạo hiệu ứng mượt mà khi màu chữ và nền thay đổi */
+}
+.menu1 li a:hover {
+    color: #ff0000; /* Màu chữ thay đổi khi di chuột qua */
+    background-color: #f3b5b5; /* Màu nền thay đổi khi di chuột qua */
+    transition: all 0.3s ease; /* Tạo hiệu ứng mượt mà */
+}
+.column1{
+    width: 100%;
+    height: 100vh; 
+    width: 94%; /* Điều chỉnh kích thước của phần đầu tiên */
+}
+.half{
+    width: 100%;
+    height: 100vh;
+}
+.header{
+    display: flex;
+    width: 100vw;
+}
+.Title{
+    padding: 0 0px 0 0;
+}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the search container */
+.search-container {
+    position: relative;
+    width: 400px; /* Độ rộng của thanh tìm kiếm */
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 300px; /* Dịch chuyển sang phải */
+  }
+  
+  /* Style the search input */
+  .search-container input[type="text"] {
+    width: calc(100% - 40px); /* Chiều rộng của input trừ đi chiều rộng của biểu tượng kính lúp và khoảng cách */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2d303e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect on the search input */
+  .search-container input[type="text"]:hover,
+  .search-container input[type="text"]:focus {
+    background-color: #e0e0e0;
+  }
+  
+  /* Style the search button */
+  .search-container button {
+    position: absolute;
+    top: 31%;
+    left: 81%; /* Đặt khoảng cách từ biểu tượng kính lúp đến biên trái của thanh tìm kiếm */
+    transform: translateY(-50%);
+    padding: 5px;
+    background-color: #2d303e;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style the search icon */
+  .search-container button::before {
+    content: "\1F50D"; /* Mã Unicode của biểu tượng kính lúp */
+    font-size: 18px;
+  }
+  
+  /* Hover effect on the search button */
+  .search-container button:hover {
+    background-color: #0056b3;
+  }
+.menu{
+    display: flex;
+    width: 700px; 
+    border-bottom:1px  solid #ccc; 
+}
+.menu li {
+    list-style-type: none; /* Loại bỏ dấu chấm liệt kê */
+    padding: 0; /* Loại bỏ padding mặc định của danh sách */
+    margin: 0;
+}
+.menu a {
+    color: white; 
+    text-decoration: none; 
+    display: block; 
+    padding: 10px 20px; /* Khoảng cách bên trong mỗi mục */
+    margin-bottom: 5px; /* Khoảng cách giữa các mục */
+}
+.menu a:hover {
+    color: #EA7C69; /* Màu chữ khi nhấn vào */
+}
+.menu2 {
+  background-color: #252836;
+  border-radius: 5px;
+  margin: 10px 0 0 0;
+  width: 80%;
+  height: 65px;
+}
+label {
+  font-weight: bold;
+  margin-right: 50%;
+  color: #ffff;
+  padding: 10px;
+  border-right: 1px solid black; /* Thêm đường viền bên phải cho nhãn */
+  padding-right: 10px;
+}
+select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #1F1D2B;
+  font-size: 16px;
+  width: 140px;
+  height: 50px;
+  color: white; /* Màu chữ trắng */
+  background-color: #1F1D2B; /* Màu nền đen */
+}
+.dish{
+    display: flex;
+    width: 100%;
+}
+.dish-item {
+    width: 250px;
+    height: 300px;
+    margin-top: 226px;
+    margin-left: 126px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease; /* Tạo hiệu ứng transition cho bóng đổ */
+    margin: 0px 50px 0 0;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Tạo khoảng cách dưới cho mỗi dish-item */
+    overflow: hidden; /* Ẩn phần dư thừa nếu nội dung quá lớn */
+    background-color: #1f1d2b;
+}
+.dish-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hiển thị bóng đổ lớn hơn khi di chuột vào */
+}
+.dish-item img {
+    width: 216px;
+    height: 167px;
+    margin-left: 17px;
+    border-radius: 5px;
+}
+.dish-item h1{
+    width: 235px;
+    height: 47px;
+    margin-top: 28px;
+    left: 10px;
+    gap: 0px;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 30.26px;
+    text-align: center;
+    color: #ffff;
+}
+.dish-item a {
+    display: inline-block; /* Đảm bảo phần tử <a> hiển thị như một block element để có thể thay đổi kích thước */
+    padding: 10px 2px 20px 69px; /* Kích thước của nút */
+    width: 100%;
+    height: 51px;
+    background: linear-gradient(to bottom, #ea7c69,#ea7c69);
+    border: 10px solid #ea7c69; /* Viền của nút */
+    border-radius: 15px; /* Bo tròn góc của nút */
+    color:#fff; /* Màu chữ cho nút */
+    text-decoration: none; /* Loại bỏ gạch chân mặc định */
+    transition: all 0.3s ease; 
+}
+.app__whatch {
+    position: fixed;
+    top: 0;
+    right: -550px; /* Start hidden outside of screen */
+    width: 550px;
+    height: 100%;
+    background-color: #1f1d2b;
+    transition: right 0.01s ease; /* Transition effect */
+}
+.app__whatch.active {
+    right: 0; /* Show when active class is present */
+}
+.Orders{
+    color: rgb(212, 216, 216);
+}
+.Orders h1{
+    width: 240px;
+    height: 20px;
+    margin-top: 30px;
+    left: 16px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36.31px;
+    text-align: center;
+}
+.Orders img{
+    float: right;
+    margin-top: -40px;
+    margin-right: 10px;
+    width: 32px;
+}
+.danhsach{
+    display: flex;
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+}
+.name{
+    width: 280px;
+    padding: 0 0 0 30px;
+}
+.sl{
+    width: 150px;
+}
+.gachchan2{
+    margin:0;
+
+}
+.header__navbar1{
+    display: flex;
+    color: aliceblue;
+    height: 80px;
+    margin-top: 10px;
+}
+.header__navbar1 img{
+    width: 80px;
+    height: 70px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.header__navbar1 h1{
+    width: 220px;
+    padding: 0 0 0 20px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.header__navbar1 h2{
+    padding: 5px 20px 0 20px;
+    height: 40px;
+    background-color: #2D303E;
+    border-radius: 10px; 
+    font-weight: 300;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+}
+.header__navbar1 h3{
+    width: 105px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 80px;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+
+
+}
+.header__navbar1-item{
+    display: flex;
+    margin-left: 5px;
+    margin-top: 0px;
+}
+.sticky-note {
+  width: 100%;
+}
+textarea {
+    width: 350px;
+    resize: none;
+    font-size: 16px;
+    padding: 0px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #2D303E;
+    border: 1px solid #393C49
+}
+textarea::placeholder {
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: #E0E6E9;
+}
+.xoabo img{
+    padding: 0 50px 0 0px;
+    height: 40px;
+}
+.discount{
+    display: flex;
+    color: #545864;
+    font-size: 15px;
+}
+.discount h1{
+    width: 430px;
+    font-size: 15px;
+    margin: 0;
+}
+.discount h2{
+    font-size: 15px;
+    margin: 0;
+}
+.pay-item{
+   margin: 0 0 0 150px;   
+}
+.pay-item a:hover {
+  background: linear-gradient(to bottom, #EA7C69,#EA7C69);
+}
+.pay-item a{
+    text-decoration: none;
+    color: rgb(249, 244, 244);
+    display: inline-block;
+    padding: 13px 15px;
+    border-radius: 5px; 
+    background: linear-gradient(to bottom, #ea7c69,#ea7c69);
+    font-size: 16px;    
+}
+.navbar{
+   display: flex;
+   justify-content: space-between; /* Căn các phần vào hai bên */
+   align-items: center; /* Căn giữa theo chiều dọc */
+   background-color: #4c37c3;
+   width:100% ;
+   height: 100%;
+}
+.overlay {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+}
+.overlay__navbar{
+    flex-grow: 3.6;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999;
+}
+.overlay__navbar-item{
+    flex-grow: 5;
+    background-color: #1f1d2b;
+    display: flex;
+}
+.overlay__navbar-item-a{
+    flex-grow: 4;
+    background-color: #1f1d2b;
+}
+.overlay__navbar-item-b{
+    flex-grow: 5;
+    background-color: #1f1d2b;
+}
+.divider {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    width: 2px;
+}
+.chu {
+    overflow: auto; 
+}
+.chu p {
+    float: left; 
+    margin-right: 10px; 
+    color: #faf9f9;
+}
+.chu img {
+    float: right; 
+    margin: 5px;
+    margin-top: 15px;
+}
+body, html {
+    height: 100%; 
+    margin: 0;
+}
+.column1 {
+    display: flex; 
+    flex: 1; 
+    overflow: hidden; 
+}
+.navbar__item{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -1700px; 
+    width: 1535px;
+    height: 100%;
+    transition: right 0.01s ease; 
+}
+.navbar__item.show {
+    right: 0; 
+}
+.navbar__item-a{
+    width: 600px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+}
+.navbar__item-b{
+    width: 570px;
+    height: 100%;
+    background-color:#1f1d2b;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+}
+.navbar__item-c{
+    width: 630px;
+    height: 100%;
+    background-color:#1f1d2b;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+}
+.Out img{
+    margin: 0 0 0 20px;
+}
+.xacnhan{
+    display: flex;
+}
+.xacnhan h1{
+    width: 135px;
+    margin-right: 295px;
+    color: rgb(248, 248, 248);
+    margin-left: 31px;
+    margin-top: 15px;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36.31px;
+    text-align: center;
+
+}
+.xacnhan a{
+    margin: 10px;
+    margin-top: 20px;
+}
+.Order{
+    color: white;
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+.Order h1{
+    font-size: 20px;
+    font-weight: 200;
+}
+.danhsachs{
+    display: flex;
+    color: rgb(255, 255, 255);
+    margin-top: 0px;
+} 
+.thanhtoan{
+    color: white;
+}
+.thanhtoan h1{
+    margin-top: 35px;
+    margin-left: 17px;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36.31px;
+    text-align: left;
+
+}
+.thanhtoan h2{
+    font-size: 18px;
+    margin-top: 13px;
+    font-weight: 300;
+    margin-left:17px ;
+}
+.thanhtoan img{
+    margin-top: 52px;
+}
+.thanhtoan h3{
+    margin-left: 17px;
+}
+.payment-methods {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 0px;
+}
+.payment-method {
+    width: 70px; 
+    height: 45px; 
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    padding: 10px; 
+    text-align: center; 
+    transition: all 0.3s ease; 
+    margin: 20px auto;
+}
+
+.payment-method:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.payment-method img {
+    width: 20px; 
+    height: 20px; 
+    margin-top: -5px;
+}
+.payment-method p{
+    color: white;
+    margin: -5px 0 0 -15px;
+    width: 80px;
+    font-size: 10px;
+}
+/*chú ý */
+.sticky-notee h1{
+    width: 101px;
+    height: 26px;
+    margin: 10px;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.sticky-notee input[type="text"] {
+    width: 97%;
+    height: 40px;
+    resize: none;
+    margin-left: 10px;
+    font-size: 16px;
+    padding: 0px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #2D303E;
+    border: 1px solid #393C49;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: #E0E6E9;
+}
+.sticky-noteea{
+    display: flex;
+
+}
+.sticky-noteea h1{
+    height: 26px;
+    margin: 10px 10px;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.sticky-noteea input[type="text"] {
+    width: 100%;
+    height: 40px;
+    resize: none;
+    font-size: 16px;
+    padding: 0px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #2D303E;
+    border: 1px solid #393C49;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: #E0E6E9;
+}
+.sticky-notees-item{
+    width: Fixed (205px)px;
+    height: Fixed (70px)px;
+    padding: 84px 0px 0px 0px;
+    gap: 8px;
+    border-radius: 8px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+}
+.btn {
+    margin-left: 10px;
+    padding: 15px 95px;
+    background-color: #1f1d2b;
+    color: #EA7C69;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Thêm hiệu ứng chuyển màu cho chữ */
+    border: 1px solid #EA7C69;
+}
+
+.btn:hover {
+    background-color: #ea7c69;
+    color: #fff; /* Chuyển màu chữ sang trắng khi rê chuột vào */
+}
+
+.btn:active {
+    background-color: #EA7C69; /* Chuyển màu nền khi nhấn nút */
+    color: #fff; /* Chuyển màu chữ sang trắng khi nhấn nút */
+}
+
+.transfer-container2 {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -1700px;/* chu y*/
+    width:1630px ;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+    transition: right 0.01s ease; 
+}
+.transfer-container2.active {
+    right: 0; 
+}
+.transfer-item{
+    width: 65%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+}
+.transfer-form {
+    width: 35%;
+    background-color: #1f1d2b; /* Màu nền cho phần bên phải */
+    padding: 20px;
+}
+.check img{
+    margin-left: 250px;
+    width: 40px;
+    margin-left: 170;
+    top: 0;
+}
+.check h1{
+    color: white;
+    width: 350px;
+    margin-left: 100px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}  
+.gachchans{
+    margin: 0px;
+} 
+.transfer-form-item{
+    background-color: #2d303e;
+    border-radius: 10px;
+    width: 520px;
+    height: 155px;
+    color: #f8f8f8;
+    margin-top: 1px;
+    padding: 8px;
+}
+.transfer-form-item h1{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: lighter;
+}
+.transfer-form-a{
+    display: flex;
+}
+.transfer-form-a img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.transfer-form-a h1{
+    width: 160px;
+    margin: 0;
+    font-size: 17px;
+}
+.transfer-form-tt {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d303e;
+    border-radius: 10px;
+    width: 520px;
+    height: 250px;
+    color: #f8f8f8;
+    margin-top: 10px;
+    padding: 16px;
+}
+.transfer-form-tt h1{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.transfer-form-tt h2{
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 18px;
+}
+.columnc {
+    flex: 1;
+    padding: 0 10px;
+}
+.transfer-form-xn{
+    display: flex;
+}
+.btnn {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #ea7c69; /* Red border */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 32px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+}
+.btnn:hover {
+    background-color: #ea7c69; /* Màu nền khi rê chuột vào */
+}
+.btnnn{
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #ea7c69; /* Red border */
+    padding: 18px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 8px 180px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+}
+.btnnn:hover {
+    background-color: #ea7c69;
+
+}
+.hidden {
+    display: none;
+}
+.header__navbar{
+    display: flex;
+    color: aliceblue;
+    height: 80px;
+    margin-top: 10px;
+}
+.header__navbar img{
+    width: 80px;
+    height: 70px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.header__navbar h1{
+    width: 220px;
+    padding: 0 0 0 20px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.header__navbar h2{
+    padding: 10px 20px 0 20px;
+    height: 40px;
+    background-color: #2D303E;
+    border-radius: 10px; 
+    font-weight: 300;
+}
+.header__navbar h3{
+    padding: 12px 0 0 70px;
+    font-weight: 300;
+}
+.header__navbar-item{
+    display: flex;
+    margin-left: 5px;
+    margin-top: 0px;
+}
+.transfer__container3 {
+    position: fixed;
+    top: 0;
+    right: -1700px;
+    width: 1535px;
+    height: 100%;
+    transition: right 0.01s ease;
+    z-index: 9999;
+}
+
+.transfer__container3.active {
+    right: 0;
+}
+
+.transfer__container,
+.transfer__food {
+    position: absolute;
+    height: 100%;
+    z-index: 9999;
+}
+
+.transfer__container {
+    left: 0; /* Bắt đầu từ bên trái */
+    width: 67%; /* Chiếm 67% chiều rộng */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.transfer__food {
+    right: 0; /* Bắt đầu từ bên phải */
+    width: 36%; /* Chiều rộng là 36% */
+    background-color: #1f1d2b;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+}
+
+
+.Ordersa{
+    color: rgb(212, 216, 216);
+    height: 55px;
+}
+.Ordersa img{
+    width: 30px;
+    height: 32px;
+    top: 15px;
+    left: 10px;
+    padding: 9.38px 5px 9.38px 5px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+.Ordersa h1{
+    width: 258px;
+    height: 36px;
+    top: 45px;
+    left: 25px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36.31px;
+    text-align: center;
+}
+.Ordersa h2{
+    width: 174px;
+    height: 24px;
+    top: 102px;
+    margin-left: 25px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24.2px;
+    text-align: left;
+
+}
+.danhsacha{
+    display: flex;
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    height: 24px;
+}
+.namea{
+    width: 36px;
+    height: 24px;
+    top: 164px;
+    left: 40px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: center;
+        
+}
+.sla{
+    width: 87px;
+    height: 24px;
+    top: 164px;
+    margin-left: 260px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: center;
+
+
+}
+.timea{
+    width: 45px;
+    height: 24px;
+    top: 164px;
+    margin-left: 60px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: center;
+
+}
+.gachchan1a{
+    margin:0;
+    max-width: 100%;
+    height: 23px;
+
+}
+.header__navbar1a{
+    display: flex;
+    color: aliceblue;
+    height: 80px;
+    margin-top: 10px;
+}
+.header__navbar1a img{
+    width: 80px;
+    height: 70px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.header__navbar1a h1{
+    width: 180px;
+    padding: 0 0 0 20px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.header__navbar1a h2{
+    padding: 5px 20px 0 20px;
+    height: 40px;
+    background-color: #2D303E;
+    border-radius: 10px; 
+    font-weight: 300;
+    margin-left: 70px;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+}
+.header__navbar1a h3{
+    padding: 5px 10px 0 10px;
+    height: 40px;
+    background-color: #2D303E;
+    margin-left: 55px;
+    border-radius: 10px; 
+    font-weight: 300;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+}
+.header__navbar1a-itema{
+    display: flex;
+    margin-left: 5px;
+    margin-top: 0px;
+}
+.sticky-notea {
+  width: 100%;
+}
+textarea {
+    width: 350px;
+    resize: none;
+    font-size: 16px;
+    margin-left: 5px;
+    padding: 0px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #2D303E;
+    border: 1px solid #393C49
+}
+textarea::placeholder {
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: #f7f8f8;
+}
+
+.discounta{
+    display: flex;
+    color: #545864;
+    font-size: 15px;
+}
+.discounta h1{
+    width: 430px;
+    font-size: 15px;
+    margin: 0;
+}
+.discounta h2{
+    font-size: 15px;
+    margin: 0;
+}
+.pay-itema{
+   margin: 0 0 0 200px;   
+}
+.pay-itema a:hover {
+  background: linear-gradient(to bottom, #EA7C69,#EA7C69);
+}
+.pay-itema a{
+    text-decoration: none;
+    color: rgb(249, 244, 244);
+    display: inline-block;
+    padding: 13px 35px;
+    border-radius: 5px; 
+    background: linear-gradient(to bottom, #ea7c69,#ea7c69);
+    font-size: 16px;    
+}
+@media only screen and (max-width: 46.1875em) {
+    .app {
+        overflow-y: auto;
+        width: 100%;
+        height: 100vh;
+      }
+    .app1 {
+        display: none; /* Ẩn phần này trên giao diện di động */
+        height: 170px;
+      }
+    .header{
+    width: 100vw;
+    }
+    .Title{
+       width: 5px;
+    }
+    .Title img{
+        margin: 5px;
+        width: 100px;
+    }
+    .search-container {
+        position: relative;
+        width: 540px;
+        margin: 5px 5px 0 140px;
+      }
+    .search-container button {
+        position: absolute;
+        top: 17px;
+        right: 7px;
+    }
+    .column1{
+        width: 100%;
+        height: 100vh; 
+    }
+    .menu {
+      font-size: 8px;
+      margin: 0;
+      width: 100%;
+    }
+    .menu2{
+        font-size: 10px;
+        margin: 0px;
+        width: 100%;
+        height: 30px;
+    }
+    label {
+        font-weight: bold;
+        margin-right: 50%;
+      }
+    select {
+        font-size: 10px;
+        width: 85px;
+        height: 30px;
+        
+      }
+      .dish {
+        display: flex;
+        max-width: 95%;
+        height: 57vh;
+        flex-wrap: wrap; /* Cho phép các mục xuống hàng khi không còn không gian đủ */
+        justify-content: space-between;
+    }
+    .dish-item{
+        height: 25vh;
+        flex-basis: calc(50% - 8px);  /* Sử dụng flex để phân chia không gian một cách linh hoạt */
+        display: flex;
+        flex-direction: column; /* Hiển thị các phần tử dọc */
+        align-items: center; /* Căn các phần tử theo trục ngang */
+        margin: 4px;
+        box-sizing: border-box; /* Bao gồm padding và border vào kích thước của phần tử */
+        padding: 0 4px; /* Tạo ra một khoảng trống nhỏ giữa các phần tử */
+        }
+    .dish-item img{
+        width: 70%;
+        height: 110px;
+        margin: 0px;
+        border-radius: 8px;
+    }
+    .dish-item h1{
+        font-size: 14px;
+        margin: 5px;
+        height: 20%;
+    }
+    .dish-item a{
+        display: inline-block; /* Đảm bảo phần tử <a> hiển thị như một block element để có thể thay đổi kích thước */
+        padding: 0px 0px 0px 25%; /* Kích thước của nút */
+        font-size: 15px;
+        height: 5vh;
+        margin-top: 0px;
+        width: 100%;
+        border: 10px solid #ea7c69; /* Viền của nút */
+        border-radius: 20px; /* Bo tròn góc của nút */
+    }
+    .app__whatch{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .Orders{
+        margin: 0;
+        height: 5%;
+    }
+    .Orders h1{
+        margin-top: 4px;
+        margin-left: -40px;
+        font-size: 18px;
+    }
+    .danhsach{
+        margin-top: 20px;
+        height: 30%;
+    }
+    .name{
+        width: 200px;
+        padding: 0 0 0 110px;
+    }
+    .gachchan2 {
+        margin: 0px;
+    }
+    .menusoluong{
+        top: 0;
+        height: 60px;
+    }
+    .sl{
+        width: 100px;
+    }
+    .header__navbar1{
+        margin-top: 0px;
+        width: 100%;
+        height: 11vh;
+        font-size: 15px;
+    }
+    .header__navbar1 h1 {
+        margin-top: 1px;
+        font-size: 15px;
+    }
+    .header__navbar1 h2{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .header__navbar1 h3{
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .header__navbar1-item{
+        font-size: 1px;
+    }
+    .discount{
+        width: 97%;
+    }
+
+    .sticky-note{
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    .pay-item{
+        margin:0% 18% 0% 22%;
+    }
+    textarea {
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+    }
+    .xoabo img{
+        margin-left: 85px;
+        margin-right: 10px;
+        padding: 5px;
+
+    }
+    .navbar__item-c{
+        width: 30%;
+    }
+    .thanhtoan{
+        margin-left: 80px;
+    }
+    .thanhtoan h1{
+        margin-top: 5px;
+        font-size: 23px;
+    }
+    .thanhtoan h2{
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    .thanhtoan img{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .thanhtoan h3{
+        margin: 0 0 0 70px;
+    }
+    .payment-methods{
+        width: 92%;
+        margin: 0 0 0 55px;
+    }
+    .sticky-notees{
+        width: 78%;
+        margin: 0 0 0 90px;
+    }
+    .sticky-notees h1{
+        font-size: 15px;
+        margin-bottom: 5%;
+    }
+    .sticky-noteea h1{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .sticky-notees-item{
+        width: 500px;
+    }
+    .btn {
+        padding: 10px 57px; 
+        background-color:#1f1d2b;
+    }
+    .transfer-form{
+        width:35% ;
+    }
+    .check{
+        margin-left: 17%;
+        font-size: 13px;
+    }
+    .gachchans{
+        margin: 0 0 0 100px;
+    } 
+    .transfer-form-item{
+        width: 350px;
+        margin-left: 190px;
+        padding: 10px; /* Thêm padding cho transfer-form-item */
+   
+    }
+    .transfer-form-item h1{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 19px;
+    }
+    .transfer-form-a{
+        display: flex;
+    }
+    .transfer-form-a img{
+        width: 75px;
+        height: 70px;
+        margin: 10px 50px 0 10px;
+    }
+    .transfer-form-a h1{
+        width: 160px;
+        margin-top: 8px;
+        font-size: 17px;
+    }
+    .transfer-form-tt {
+        width: 350px;
+        margin-left: 190px;
+       padding: 10px;
+       margin-bottom: 20px;
+    }
+    .transfer-form-tt h1{
+        width: 150px;
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+    .transfer-form-tt h2{
+        font-size: 14px;
+        margin-top: 0px;
+        margin-bottom: 18px;
+    }
+    .transfer-form-xn{
+        width: 350px;
+        margin-left: 190px;
+    }
+    .btnn {
+        padding: 2px 15px;
+        font-size: 16px;
+        margin: 8px 10px;
+    }
+    .transfer-form-xnn{
+        margin-left: 290px;
+    }
+    .btnnn{
+        padding: 13px 20px;
+        font-size: 16px;
+        margin: 8px 10px;
+    }
+    .transfer__food {
+        width: 27%; /* Chiều rộng là 36% */
+    }
+    .Ordersa img{
+        margin-left: 30px;
+    }
+    .Ordersa h1{
+        font-size: 20px;
+        margin-left: 0px;
+        height:27px ;
+    }
+    .Ordersa h2{
+        font-size: 15px;
+        height:  10px;
+        margin-left: 50px ;
+    }
+    .menusoluonga{
+        margin-left: 100px;
+    }
+    .danhsacha{
+        margin-top: 49px;
+    }
+    .namea{
+        font-size: 15px;
+    }
+    .sla{ 
+        font-size: 15px;
+        margin-left: 100px; 
+    }
+    .timea{
+        font-size: 15px;
+    }
+    .header__navbar1a h1{
+        font-size: 14px;
+        width: 100%;
+        height: 15px;
+    }
+    .header__navbar1a h2{
+        font-size: 14px;
+        margin: 0 50px 0 20px;
+    }
+    .header__navbar1a h3{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .thucdona{
+        margin-left: 35px;
+    }
+    .paya{
+        margin-left: 40px;
+    }
+    .discounta{ 
+        margin: 0px;
+        height:30px ;
+    }
+    .discounta h1{
+        width: 300px;
+    }
+    .pay-itema{
+        margin-left: 30%;
+    }
+}
+@media only screen and (min-width: 46.25em) and ( max-width: 63.9375em ){
+    .app1{
+        margin-right: 40px;
+    }
+    .app {
+        overflow-y: auto;
+        width: 100%;
+        height: 100vh;
+      }
+    ul{
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+        overflow: hidden;
+    }
+    ul li {
+        margin-bottom: 75px;
+    }
+    .header{
+    width: 100vw;
+    }
+    .Title{
+       width: 5px;
+    }
+    .Title img{
+        margin: 5px;
+        width: 100px;
+    }
+    .search-container {
+        position: relative;
+        width: 520px;
+        margin: 5px 5px 0 180px;
+      }
+    .search-container button {
+        width: 40px;
+        margin-top: 0px;
+        margin-left: 15px;
+    }
+    .column1{
+        width: 100%;
+        height: 100vh; 
+    }
+    .menu {
+      font-size: 12px;
+      margin: 0;
+      width: 100%;
+    }
+    .menu2{
+        font-size: 14px;
+        margin: 0px;
+        width: 100%;
+        height: 30px;
+    }
+    label {
+        font-weight: bold;
+        margin-right: 63%;
+      }
+    select {
+        font-size: 10px;
+        width: 85px;
+        height: 30px;
+        
+      }
+      .dish {
+        display: flex;
+        max-width: 95%;
+        height: 57vh;
+        flex-wrap: wrap; /* Cho phép các mục xuống hàng khi không còn không gian đủ */
+        justify-content: space-between;
+    }
+    .dish-item{
+        height: 21vh;
+        flex-basis: calc(30%);  /* Sử dụng flex để phân chia không gian một cách linh hoạt */
+        display: flex;
+        flex-direction: column; /* Hiển thị các phần tử dọc */
+        align-items: center; /* Căn các phần tử theo trục ngang */
+        margin: 4px;
+        box-sizing: border-box; /* Bao gồm padding và border vào kích thước của phần tử */
+        padding: 0 4px; /* Tạo ra một khoảng trống nhỏ giữa các phần tử */
+        }
+    .dish-item img{
+        width: 90%;
+        height: 130px;
+        margin: 0px;
+        border-radius: 8px;
+    }
+    .dish-item h1{
+        font-size: 14px;
+        margin: 5px;
+        height: 20%;
+    }
+    .dish-item a{
+        display: inline-block; /* Đảm bảo phần tử <a> hiển thị như một block element để có thể thay đổi kích thước */
+        padding: 5px 0px 0px 18%; /* Kích thước của nút */
+        font-size: 18px;
+        height: 5vh;
+        margin-top: 0px;
+        width: 100%;
+        border: 10px solid #ea7c69; /* Viền của nút */
+        border-radius: 20px; /* Bo tròn góc của nút */
+    }
+    .app__whatch{
+        width: 70%;
+        height: 100%;
+    }
+    
+    .navbar__item-c{
+        width: 110%;
+    }
+    .header__navbar1{
+        margin-bottom: 5px;
+    }
+    .header__navbar1-item{
+        margin-bottom: 40px;
+    }
+    .discount{
+        margin-bottom: 40px;
+    }
+    .thanhtoan{
+        margin-left: 20px;
+    }
+    .thanhtoan img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .thanhtoan h3{
+        margin-bottom: 20px;
+    }
+    .payment-methods{ 
+        margin-bottom: 20px;
+    }
+    .sticky-notees{
+        width: 78%;
+        margin: 0 0 0 30px;
+    }
+    .sticky-noteea h1{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .sticky-noteea input[type="text"] {
+        width: 100%;
+        padding: 20px;
+    }
+    .sticky-notee input[type="text"] {
+        width: 110%;
+        padding: 16px;
+    }
+    .sticky-notees-item{
+        margin-left: 50px;
+    }
+    .check{
+        margin-bottom: 20px;
+    }
+    .gachchans{
+        margin-bottom: 25px;
+    }
+    .transfer-form-item{
+        padding: 5px; 
+        width: calc(100% + 20px); /* Tăng chiều rộng của transfer-form-item và padding bằng tổng số px */
+        margin-left: -10px;
+        height: 180px;
+        margin-bottom: 20px;
+    }
+    .transfer-form-tt{
+        padding: 10px; 
+        width: calc(100% + 20px); /* Tăng chiều rộng của transfer-form-item và padding bằng tổng số px */
+        margin-left: -10px;
+        height: 300px;
+        margin-bottom: 40px;
+    }
+    .transfer-form-a h1{
+        font-size: 18px;
+    }
+    .columnc h1{
+        font-size: 18px;
+    }
+    .columnc h2{
+        font-size: 19px;
+    }
+    .btnn{
+        padding: 18px 33px;
+    }
+    .btnnn{
+        padding: 18px 55px;
+        font-size: 18px;
+        margin: 10px 150px;
+    }
+}

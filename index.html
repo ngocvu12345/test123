@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="app">
+        <nav class="app1">
+            <div class="sidebar" id="sidebar">
+                <!--<div class="menu-toggle" id="menu-toggle">
+                    <button onclick="toggleMenu()">
+                        <ion-icon name="home"></ion-icon>
+                    </button>
+                </div>-->
+                <ul class="menu1">
+                    <li><a href="#logo"><img src="/jpg/Vector.png" alt=""></a></li>
+                    <li><a href="#home"><img src="/jpg/Home.png" alt=""></a></li>
+                    <li><a href="#hotel"><img src="/jpg/Hotel.png" alt=""></a></li>
+                    <li><a href="#teamwork"><img src="/jpg/teamwork 1.png" alt=""></a></li>
+                    <li><a href="#sidebar"><img src="/jpg/Dashboard.png" alt=""></a></li>
+                    <li><a href="#mesingger"><img src="/jpg/Message.png" alt=""></a></li>
+                    <li><a href="#notification"><img src="/jpg/Notification.png" alt=""></a></li>
+                    <li><a href="#setting"><img src="/jpg/Setting.png" alt=""></a></li>
+                    <li><a href="#logout"><img src="/jpg/Log Out.png" alt=""></a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="column1">
+            <div class="half">
+                <div class="header">
+                    <div class="Title">
+                        <a href=""><img src="/jpg/Title.png" alt=""></a>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="menu">
+                    <li><a href="">Món ăn yêu thích</a></li>
+                    <li><a href="">Gà</a></li>
+                    <li><a href="">Salat</a></li>
+                    <li><a href="">Cơm</a></li>
+                    <li><a href="">Rau</a></li>
+                    <li><a href="">Mì</a></li>
+                </div>
+                <div class="menu2">
+                    <label for="dine-in">Choose Dishes</label>
+                    <select id="dine-in">
+                        <option value="none">Dine In</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="burger">Burger</option>
+                        <option value="pasta">Pasta</option>
+                        <option value="sushi">Sushi</option>
+                    </select>
+                </div>
+                <ul class="dish">
+                    <li class="dish-item">
+                        <img src="/jpg/cach-lam-com-rang-dua-bo-1 1.png" alt="">
+                        <h1>Cơm rang dưa bò</h1>
+                        <a href="#tien" onclick="toggleAppWatch()">50.000 VND</a>
+                    </li>
+                    <li class="dish-item">
+                        <img src="/jpg/r23-800x500 1.png" alt="">
+                        <h1>Greek salad</h1>
+                        <a href="#tien" onclick="toggleAppWatch()">70.000 VND</a>
+                    </li>
+                    <li class="dish-item">
+                        <img src="/jpg/r8-800x500 1.png" alt="">
+                        <h1>Cobb salad</h1>
+                        <a href="#tien" onclick="toggleAppWatch()">150.000 VND</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- app__whatch section -->
+        <div class="app__whatch">
+                <div class="Orders">
+                    <h1>Orders #267342</h1>
+                    <img src="/jpg/close.png" alt="" id="closeButton">
+                </div>
+                <div class="menusoluong">
+                    <ul class="danhsach">
+                        <p class="name">Tên</p>
+                        <p class="sl">số lượng</p>
+                        <p class="dongia">đơn giá </p>
+                    </ul>
+                    <p class="gachchan2"><img src="/jpg/Top Divider (1).png" alt=""></p>
+                </div>
+                <div class="thucdon">
+                    <!-- tab 1 -->
+                    <section class="header__navbar1">
+                        <img src="/jpg/cach-lam-com-rang-dua-bo-1 1 (1).png" alt="">
+                        <h1>Cơm rang dưa bò 50 VND</h1>
+                        <h2>2</h2>
+                        <h3>100 VND</h3>
+                    </section>
+                    <section class="header__navbar1-item">
+                        <div class="sticky-note">
+                            <textarea placeholder=" ghi chú"></textarea>
+                        </div>
+                        
+                        <div class="xoabo">
+                            <a href=""><img src="/jpg/Recycle bin.png" alt=""></a>
+                        </div>
+                    </section>
+                    <!-- tab 2 -->
+                    <section class="header__navbar1">
+                        <img src="/jpg/r23-800x500 1 (1).png" alt="">
+                        <h1>Greek salad 70VND</h1>
+                        <h2>2</h2>
+                        <h3>140 VND</h3>
+                    </section>
+                    <section class="header__navbar1-item">
+                        <div class="sticky-note">
+                            <textarea placeholder=" ghi chú"></textarea>
+                        </div>
+                        <div class="xoabo">
+                            <a href=""><img src="/jpg/Recycle bin.png" alt=""></a>
+                        </div>
+                    </section>
+                    <!-- tab 3 -->
+                    <section class="header__navbar1">
+                        <img src="/jpg/r8-800x500 1 (1).png" alt="">
+                        <h1>Cobb salad 150VND</h1>
+                        <h2>3</h2>
+                        <h3>450 VND</h3>
+                    </section>
+                    <section class="header__navbar1-item">
+                        <div class="sticky-note">
+                            <textarea placeholder=" ghi chú"></textarea>
+                        </div>
+                        <div class="xoabo">
+                            <a href=""><img src="/jpg/Recycle bin.png" alt=""></a>
+                        </div>
+                    </section>
+                </div>
+                <div class="pay">
+                    <ul class="gachchan1">
+                        <img src="/jpg/Top Divider (1).png" alt="">
+                    </ul>
+                    <ul class="discount">
+                        <h1>Giảm giá</h1>
+                        <h2>0 VND</h2>
+                    </ul>
+                    <ul class="discount">
+                        <h1>Tổng tiền</h1>
+                        <h2>690 VND</h2>
+                    </ul>
+                    <ul class="pay-item">
+                        <a href="">Thanh toán bằng hình thức</a>
+                    </ul>
+                </div>
+        </div>
+        <!--xac nhan-->
+        <div class="navbar__item">
+            <div class="navbar__item-a"></div>
+            <div class="navbar__item-b">
+                <div class="Out">
+                    <a href=""><img src="/jpg/Line.png" alt=""></a>
+                </div>
+                <div class="xacnhan">
+                    <h1>Xác nhận</h1>
+                    <a href=""><img src="/jpg/Vector 9.png" alt=""></a>
+                </div>
+                <div class="Order">
+                    <h1>Orders #267342</h1>
+                </div>
+                <div class="menusoluong">
+                    <ul class="danhsachs">
+                        <p class="name">Tên</p>
+                        <p class="sl">số lượng</p>
+                        <p class="dongia">đơn giá </p>
+                    </ul>
+                    <p class="gachchan"><img src="/jpg/Top Divider (1).png" alt=""></p>
+                </div>
+                <div class="thucdon">
+                    <!-- tab 1 -->
+                    <section class="header__navbar">
+                        <img src="/jpg/cach-lam-com-rang-dua-bo-1 1 (1).png" alt="">
+                        <h1>Cơm rang dưa bò 50 VND</h1>
+                        <h2>2</h2>
+                        <h3>100 VND</h3>
+                    </section>
+                    <section class="header__navbar-item">
+                        <div class="sticky-note">
+                            <textarea placeholder=" ghi chú"></textarea>
+                        </div>
+                        
+                        <div class="xoabo">
+                            <a href=""><img src="/jpg/Recycle bin.png" alt=""></a>
+                        </div>
+                    </section>
+                    <!-- tab 2 -->
+                    <section class="header__navbar">
+                        <img src="/jpg/r23-800x500 1 (1).png" alt="">
+                        <h1>Greek salad 70VND</h1>
+                        <h2>2</h2>
+                        <h3>140 VND</h3>
+                    </section>
+                    <section class="header__navbar-item">
+                        <div class="sticky-note">
+                            <textarea placeholder=" ghi chú"></textarea>
+                        </div>
+                        <div class="xoabo">
+                            <a href=""><img src="/jpg/Recycle bin.png" alt=""></a>
+                        </div>
+                    </section>
+                    <!-- tab 3 -->
+                    <section class="header__navbar">
+                        <img src="/jpg/r8-800x500 1 (1).png" alt="">
+                        <h1>Cobb salad 150VND</h1>
+                        <h2>3</h2>
+                        <h3>450 VND</h3>
+                    </section>
+                    <section class="header__navbar-item">
+                        <div class="sticky-note">
+                            <textarea placeholder=" ghi chú"></textarea>
+                        </div>
+                        <div class="xoabo">
+                            <a href=""><img src="/jpg/Recycle bin.png" alt=""></a>
+                        </div>
+                    </section>
+                </div>
+                <div class="pay">
+                    <ul class="gachchan1">
+                        <img src="/jpg/Top Divider (1).png" alt="">
+                    </ul>
+                    <ul class="discount">
+                        <h1>Giảm giá</h1>
+                        <h2>0 VND</h2>
+                    </ul>
+                    <ul class="discount">
+                        <h1>Tổng tiền</h1>
+                        <h2>690 VND</h2>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__item-c">
+                <div class="thanhtoan">
+                    <h1>Thanh toán</h1>
+                    <h2>Orders #267342</h2>
+                    <img src="/jpg/Top Divider (1).png" alt="">
+                    <h3>Phương thức thanh toán</h3>
+                </div>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <img src="/jpg/Subtract.png" alt="">
+                        <p>Credit Card</p>
+                    </div>
+                    <div class="payment-method">
+                        <img src="/jpg/Paypal.png" alt="">
+                        <p>Paypal</p>
+                    </div>
+                    <div class="payment-method">
+                        <img src="/jpg/Wallet.png" alt="">
+                        <p>Cash</p>
+                    </div>
+                </div>
+                <div class="sticky-notees">
+                    <div class="sticky-notee">
+                        <h1>Tên chủ thẻ</h1>
+                        <input type="text" placeholder="...">
+                    </div>
+                    <div class="sticky-notee">
+                        <h1>Số tài khoản</h1>
+                        <input type="text" placeholder="...">
+                    </div>
+                    <div class="sticky-noteea">
+                        <ul>
+                            <h1>Ngày hết hạn</h1>
+                             <input type="text" placeholder="...">
+                        </ul>
+                        <ul>
+                            <h1>CVV</h1>
+                            <input type="text" placeholder="...">
+                    </div>
+                    <div class="sticky-notees-item">
+                        <button class="btn">Bỏ qua</button>
+                        <button class="confirm-btn btn">Xác nhận </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--chuý-->
+        <nav class="transfer-container2">
+            <div class="transfer-item">
+            </div>
+            <div class="transfer-form">
+                <div class="check">
+                    <img src="/jpg/Check.png" alt="">
+                    <h1>Bạn đã thanh toán thành công
+                        500.000 VND</h1>
+                </div>
+                <p class="gachchans"><img src="/jpg/Top Divider (1).png" alt=""></p>
+                <div class="transfer-form-item">
+                    <h1>Đến tài khoản</h1>
+                    <nav class="transfer-form-a">
+                        <img src="/jpg/logo-vietinbank-e1492228826260 1.png" alt="">
+                        <h1>NGUYEN VAN TU
+                            8661425461645
+                            Công Thương Việt Nam (VIETINBANK)</h1>
+                    </nav>
+                </div>
+                <div class="transfer-form-tt">
+                    <div class="columnc">
+                        <h1>Tài khoản nguồn</h1>
+                        <h1>Nội dung</h1>
+                        <h1>Thời gian</h1>
+                        <h1>Hình thức chuyển</h1>
+                        <h1>Mã giao dich</h1>
+                    </div>
+                    <div class="columnc">
+                        <h2>0961793135 VU DINH DONG DUONG</h2>
+                        <h2>VU DINH DONG DUONG chuyen khoan</h2>
+                        <h2>15:59:13, 13/03/2024</h2>
+                        <h2>Chuyển nhanh Napas 247</h2>
+                        <h2>FT5612467925654</h2>
+                    </div>
+                </div>
+                <div class="transfer-form-xn">
+                    <button class="btnn">Thời gian đợi món</button>
+                    <button class="btnn">Lưu mẫu giao dịch</button>
+                </div>
+                <div class="transfer-form-xnn">
+                    <button class="btnnn">Về trang chủ</button>
+                </div>
+            </div>
+        </nav>
+        <nav class="transfer__container3">
+            <div class="transfer__container">
+            </div>
+            <div class="transfer__food">
+                <div class="Ordersa">
+                    <img src="/jpg/Line.png" alt="">
+                    <h1>Thời gian đợi món</h1>
+                    <h2>Orders #267342</h2>
+                </div>
+                <div class="menusoluonga">
+                    <ul class="danhsacha">
+                        <p class="namea">Tên</p>
+                        <p class="sla">số lượng</p>
+                        <p class="timea">Time </p>
+                    </ul>
+                    <p class="gachchan2a"><img src="/jpg/Top Divider (1).png" alt=""></p>
+                </div>
+                <div class="thucdona">
+                    <!-- tab 1 -->
+                    <section class="header__navbar1a">
+                        <img src="/jpg/cach-lam-com-rang-dua-bo-1 1 (1).png" alt="">
+                        <h1>Cơm rang dưa bò 50 VND</h1>
+                        <h2>2</h2>
+                        <h3>5 phút</h3>
+                    </section>
+                    <section class="header__navbar1-itema">
+                        <div class="sticky-notea">
+                            <textarea placeholder=" ghi chú"></textarea>
+                        </div>
+                    </section>
+                    <!-- tab 2 -->
+                    <section class="header__navbar1a">
+                        <img src="/jpg/r23-800x500 1 (1).png" alt="">
+                        <h1>Greek salad 70VND</h1>
+                        <h2>2</h2>
+                        <h3>17 phút</h3>
+                    </section>
+                    <section class="header__navbar1-itema">
+                        <div class="sticky-notea">
+                            <textarea placeholder=" ghi chú"></textarea>
+                        </div>
+                    </section>
+                    <!-- tab 3 -->
+                    <section class="header__navbar1a">
+                        <img src="/jpg/r8-800x500 1 (1).png" alt="">
+                        <h1>Cobb salad 150VND</h1>
+                        <h2>3</h2>
+                        <h3>12 phút</h3>
+                    </section>
+                    <section class="header__navbar1-itema">
+                        <div class="sticky-notea">
+                            <textarea placeholder=" ghi chú"></textarea>
+                        </div>
+                    </section>
+                </div>
+                <div class="paya">
+                    <ul class="gachchan1a">
+                        <img src="/jpg/Top Divider (1).png" alt="">
+                    </ul>
+                    <ul class="discounta">
+                        <h1>Giảm giá</h1>
+                        <h2>0 VND</h2>
+                    </ul>
+                    <ul class="discounta">
+                        <h1>Tổng tiền</h1>
+                        <h2>690 VND</h2>
+                    </ul>
+                    <ul class="pay-itema">
+                        <a href="">về trang chủ </a>
+                    </ul>
+                </div>
+        </div>
+    </header>
+    <script>
+        function toggleNavbar() {
+            var navbar = document.querySelector('.navbar__item');
+            if (navbar) {
+                navbar.classList.toggle('show');
+            }
+        }
+    
+        function toggleAppWatch() {
+            var appWatch = document.querySelector('.app__whatch');
+            if (appWatch) {
+                appWatch.classList.toggle('active');
+            }
+        }
+    
+        document.querySelector('.pay-item a').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            toggleNavbar(); 
+            toggleAppWatch(); 
+        });
+    
+        const transferContainer = document.querySelector('.transfer-container2');
+        const confirmButton = document.querySelector('.confirm-btn');
+        
+        function toggleTransferContainer() {
+            if (transferContainer) {
+                transferContainer.classList.toggle('active');
+            }
+        }
+    
+        confirmButton.addEventListener('click', function() {
+            toggleTransferContainer(); 
+            toggleNavbar(); 
+            toggleAppWatch(); 
+        });
+    
+        const closeButton = document.querySelector('.app__whatch img');
+    
+        if (closeButton) {
+            closeButton.addEventListener('click', function() {
+                toggleAppWatch(); // Đóng thẻ app__whatch khi hình ảnh được nhấp vào
+            });
+        }
+    
+        function toggleNav() {
+            const nav = document.querySelector('.transfer__container3');
+            if (nav) {
+                nav.classList.toggle('active');
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const btnn = document.querySelector('.btnn');
+            if (btnn) {
+                btnn.addEventListener('click', function() {
+                    toggleNav(); // Gọi hàm toggleNav() khi nút được nhấn
+                    toggleTransferContainer(); // Gọi hàm toggleTransferContainer() khi nút được nhấn
+                });
+            }
+        });
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const ordersaDiv = document.querySelector('.Ordersa');
+            if (ordersaDiv) {
+                ordersaDiv.addEventListener('click', function() {
+                    navigateBack(); // Gọi hàm navigateBack() khi div Ordersa được nhấn
+                });
+            }
+        });
+    
+        function navigateBack() {
+            const transferContainer2 = document.querySelector('.transfer-container2');
+            const transferContainer3 = document.querySelector('.transfer__container3');
+    
+            if (transferContainer2 && transferContainer3) {
+                transferContainer2.classList.add('active'); // Hiển thị lại transfer-container2
+                transferContainer3.classList.remove('active'); // Ẩn transfer-container3
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const transferForm = document.querySelector('.transfer-form-xnn');
+            const transferContainer = document.querySelector('.transfer-container2');
+            const appWatch = document.querySelector('.app__whatch');
+            const navbar = document.querySelector('.navbar__item');
+
+            if (transferForm && transferContainer && appWatch && navbar) {
+                transferForm.addEventListener('click', function() {
+            // Đóng tất cả các thẻ
+            transferContainer.classList.remove('active');
+            appWatch.classList.remove('active');
+            navbar.classList.remove('show');
+        });
+        }
+        });
+            document.addEventListener('DOMContentLoaded', function() {
+                const skipButton = document.querySelector('.btn');
+                if (skipButton) {
+                    skipButton.addEventListener('click', function() {
+                        const navbarItem = document.querySelector('.navbar__item');
+                        if (navbarItem) {
+                            navbarItem.classList.remove('show');
+                        }
+                    });
+                }
+            });
+    </script>
+    
+</body>
+</html>
